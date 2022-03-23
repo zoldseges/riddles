@@ -57,14 +57,14 @@ double area_trig(double a, double b) {
 }
 
 double area_seq(double r, double alpha) {
-  return (r * r) * alpha;
+  return (r * r) * alpha / 2;
 }
 
 void get_angles(double *alpha, double *beta,
 		Circle cA, Circle cB) {
   
 
-  *beta = asin((cA.r / 2) / cB.r) * 2;
+  *beta = acos((cB.r / 2) / cA.r);
   *alpha = (M_PI - (*beta * 2));
 }
 
@@ -86,7 +86,7 @@ double area_cB(Circle cA, Circle cB) {
 #define WINDOW_WIDTH 800
 #define CIRC_R (WINDOW_WIDTH / 2)
 
-int main(void) {
+int main2(void) {
   Circle A = circ_construct(300, 300, 100);
   Circle B = circ_construct(400, 300, 100);
 
@@ -133,7 +133,7 @@ int main(void) {
   return 0;
 }
 
-int main2(void){
+int main(void){
 
   SDL_Event event;
   SDL_Renderer *renderer;
@@ -183,8 +183,7 @@ int main2(void){
       }
       SDL_RenderPresent(renderer);
 
-      printf("areas: %.2lf %.2lf\n", area(cA), area_cB(cA, cB));
-      if(area(cA) < area_cB(cA, cB)) grow = false;
+      if((area(cA) / 2) < area_cB(cA, cB)) grow = false;
       cB.r++;
     }
     /* END MAIN */
