@@ -2,4 +2,9 @@
 goat/goat
 **/TAGS
 **/.gdb_history
+/pi/*.txt
 
+*.log
+*.aux
+*.pdf
+/pi/python/out/*
