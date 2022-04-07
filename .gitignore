@@ -8,3 +8,4 @@ goat/goat
 *.aux
 *.pdf
 /pi/python/out/*
+/pi/target
