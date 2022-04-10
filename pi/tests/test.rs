@@ -1,3 +1,2 @@
 #[test]
-fn term_test() {
-}
+fn term_test() {}
