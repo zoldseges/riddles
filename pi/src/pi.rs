@@ -1,7 +1,7 @@
+use rug::{Rational, Float};
+
 use crate::utils::Params as Params;
 use crate::utils::{Term as Term, MyTerm};
-
-use rug::{Rational, Float};
 
 pub type Pi = Float;
 

@@ -3,10 +3,10 @@ pub mod pi;
 
 pub mod bench {
 
-    use crate::utils::{Term, MyTerm, Params};
-    
     use std::time::{Duration, Instant};
 
+    use crate::utils::{Term, MyTerm, Params};
+    
     fn bench_new_term(n: u32, nsample: u32) -> Duration {
 	let mut samples: Vec<Duration> = Vec::with_capacity(nsample as usize);
         let p = Params::new((1, 2), (-1, 1), (1, 4));
