@@ -2,7 +2,7 @@
 goat/goat
 **/TAGS
 **/.gdb_history
-/pi/*.txt
+/pi/src/pi_100.txt
 
 *.log
 *.aux
